@@ -16,7 +16,7 @@ function Backend() {
       setIsLoading(true);
 
       try {
-        const response = await axios.get('http://localhost:5000/api/data');
+        const response = await axios.get('https://mmtresort-1.onrender.com/api/data');
         setData(response.data);
         // const response = await fetch('http://localhost:3001/api/data');
         // setData(await response.json());
@@ -49,7 +49,7 @@ function Backend() {
     setalert(true);
     console.log(formData,"react")
     try {
-      const response = await axios.post('http://localhost:5000/insertData', formData);
+      const response = await axios.post('https://mmtresort-1.onrender.com/insertData', formData);
       console.log(response.data.message,"response react");
       // Handle successful insertion (clear form, etc.)
     } catch (error) {
